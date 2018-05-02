@@ -1,4 +1,4 @@
-# Protfolio ApplicationController
+# SENS Portfolio Application
 
 > This is a Rails 5 Application that allows users to create their own portfolios
 
