@@ -4,6 +4,11 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+# the name of the def is the name of the view file angular.html.erb that passes the instance variable
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+
   def new
     @portfolio_item = Portfolio.new
   end
