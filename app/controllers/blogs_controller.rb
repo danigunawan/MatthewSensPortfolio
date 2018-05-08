@@ -1,15 +1,20 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    # here we have access to @blog.title because of the set_blog action below that is called as a before_action
+    @page_title = @blog.title
+    @seo_keywords = @blog.title
   end
 
   # GET /blogs/new

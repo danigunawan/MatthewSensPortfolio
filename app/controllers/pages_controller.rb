@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @phone_number = "7915643"
   end
 end
