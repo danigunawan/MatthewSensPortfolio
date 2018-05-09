@@ -1,62 +1,61 @@
-<body>
-  <div class="text-center mb-4">
-    <h3 class="h3 mb-3 font-weight-normal">Edit <%= resource_name.to_s.humanize %> </h3>
-  </div>
 
-  <!-- New Form using bootstrap floating labels example -->
+<div class="text-center mb-4">
+  <h3 class="h3 mb-3 font-weight-normal">Edit <%= resource_name.to_s.humanize %> </h3>
+</div>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
+<!-- New Form using bootstrap floating labels example -->
 
-  <div class="form-label-group">
-    <%= f.text_field :name, class: "form-control", placeholder: "Your Name", autofocus: true, autocomplete: "name" %>
-    <%= f.label :name %>
-  </div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
 
-  <div class="form-label-group">
-    <%= f.email_field :email, id: "inputEmail", class: "form-control", placeholder: "Email address", autofocus: true, autocomplete: "email" %>
-    <label for="inputEmail">Email address</label>
-  </div>
+<div class="form-label-group">
+  <%= f.text_field :name, class: "form-control", placeholder: "Your Name", autofocus: true, autocomplete: "name" %>
+  <%= f.label :name %>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<div class="form-label-group">
+  <%= f.email_field :email, id: "inputEmail", class: "form-control", placeholder: "Email address", autofocus: true, autocomplete: "email" %>
+  <label for="inputEmail">Email address</label>
+</div>
+
+<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<% end %>
+
+<i>(leave blank if you don't want to change it)</i><br />
+<div class="form-label-group">
+  <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "off", autofocus: true %>
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+    <em><%= @minimum_password_length %> characters minimum</em>
   <% end %>
+</div>
 
-  <i>(leave blank if you don't want to change it)</i><br />
-  <div class="form-label-group">
-    <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "off", autofocus: true %>
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+<div class="form-label-group">
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password confirmation", autocomplete: "off", autofocus: true %>
+  <%= f.label :password_confirmation %>
+</div>
 
-  <div class="form-label-group">
-    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password confirmation", autocomplete: "off", autofocus: true %>
-    <%= f.label :password_confirmation %>
-  </div>
+<i>(we need your current password to confirm your changes)</i><br />
+<div class="form-label-group">
+  <%= f.password_field :current_password, class: "form-control", placeholder: "Password confirmation", autocomplete: "off", autofocus: true %>
+  <%= f.label :current_password %>
+</div>
 
-  <i>(we need your current password to confirm your changes)</i><br />
-  <div class="form-label-group">
-    <%= f.password_field :current_password, class: "form-control", placeholder: "Password confirmation", autocomplete: "off", autofocus: true %>
-    <%= f.label :current_password %>
-  </div>
+<div class="checkbox mb-3">
+  <label>
+    <input type="checkbox" value="remember-me"> Remember me
+  </label>
+</div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
+<%= f.submit "Update", class: "btn btn-lg btn-primary btn-block" %>
 
-  <%= f.submit "Update", class: "btn btn-lg btn-primary btn-block" %>
+<% end %>
 
-  <% end %>
+<h3>Unhappy?</h3>
 
-  <h3>Unhappy?</h3>
-
-  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-lg btn-danger btn-block" %>
-  <br />
-  <div class="auth-links">
-    <%= link_to "Back", :back, class: "btn btn-lg btn-dark btn-block" %>
-  </div>
-</body>
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-lg btn-danger btn-block" %>
+<br />
+<div class="auth-links">
+  <%= link_to "Back", :back, class: "btn btn-lg btn-dark btn-block" %>
+</div>
