@@ -19,4 +19,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    SensPortfolioViewTool::Renderer.copyright 'Matthew Israelson', 'All rights reserved'
+  end
+
 end
