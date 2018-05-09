@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 
 /*
  * Globals
@@ -57,6 +58,7 @@ body {
 }
 
 .masthead-brand {
+  font: 40px "Monoton", sans-serif; font-weight: 400;
   margin-bottom: 0;
 }
 
@@ -82,7 +84,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
+@media (width: 100em) {
   .masthead-brand {
     float: left;
   }
