@@ -4,6 +4,6 @@
 
 <!-- link_to "link for an emaik", new_portfolio_url, subdomain: 'shmoover.com' in an email you need to send a url path so that it can link to your site properly -->
 
-<%= link_to "Create New Item", new_portfolio_path  %>
+<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin)  %>
 
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
