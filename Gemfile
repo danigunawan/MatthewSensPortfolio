@@ -64,3 +64,5 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 gem 'sens_portfolio_view_tool', git: 'https://github.com/misraelson/sens_portfolio_view_tool'
+
+gem 'petergate', '~> 1.7'
