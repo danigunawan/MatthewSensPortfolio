@@ -66,3 +66,9 @@ gem 'jquery-rails'
 gem 'sens_portfolio_view_tool', git: 'https://github.com/misraelson/sens_portfolio_view_tool'
 
 gem 'petergate', '~> 1.7'
+
+gem 'font-awesome-rails'
+
+gem 'kaminari', '~> 1.1.1'
+
+gem 'bootstrap4-kaminari-views'
