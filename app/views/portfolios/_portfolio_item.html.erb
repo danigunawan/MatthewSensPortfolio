@@ -1,9 +1,20 @@
-<h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+<div class="col-md-4">
+  <div class="card mb-4 box-shadow">
+    <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+    <div class="card-body">
+      <h3 class="card-title"><%= portfolio_item.subtitle %></h3>
+      <p class="card-text"><%= portfolio_item.body %></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin) %>
+            <%= link_to 'Delete Post', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin) %>
+          </div>
+          <small class="text-muted">9 mins</small>
+        </div>
+    </div>
+  </div>
+</div>
 
-<p><%= portfolio_item.subtitle %></p>
+<p></p>
 
-<p><%= portfolio_item.body %></p>
-
-<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-<%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
-<%= link_to 'Delete Post', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+<p></p>
