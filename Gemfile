@@ -72,3 +72,5 @@ gem 'font-awesome-rails'
 gem 'kaminari', '~> 1.1.1'
 
 gem 'bootstrap4-kaminari-views'
+
+gem 'jquery-ui-rails', '~> 6.0.1'
