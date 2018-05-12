@@ -1,4 +1,4 @@
-alert("Hey There!");
+// alert("Hey There!");
 
 /*
  * HTML5Sortable package
