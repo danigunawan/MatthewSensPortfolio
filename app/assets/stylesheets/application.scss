@@ -210,13 +210,20 @@ body {
   color: white
 }
 
-// Name highlight on homepage
+// CUSTOM COLOR ON HOME.HTML.ERB ------>
+
+// Custom name highlight COLOR on homepage
 .highlight-name {
   background: -webkit-linear-gradient(#E31B6D, #6a3093);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-// Button gradient animation on home page
+
+.alpha { color: $indigo; }
+
+// Color end <------
+
+// Button gradient animation on home page ------>
 .gradient-button-container {
   display: flex;
   // justify-content: center;
@@ -233,6 +240,7 @@ body {
   letter-spacing: 0.1em;
   margin-bottom: 20px;
   padding: 20px;
+  box-shadow: 0.5vw 0.5vw 0 $cyan;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -245,12 +253,15 @@ body {
 
  .hoverbutton:hover {
   background-position: right center; /* change the direction of the change here */
+  box-shadow: 0.2vw 0.2vw 0 lightcoral;
 }
 
 .gradient-button {
   background-image: linear-gradient(to right, #E31B6D 0%, #a044ff 51%, #00dbde 100%);
 }
-// button end
+// button end <---------
+
+
 
 // .gradient-button {
 //   width: 20vw;
