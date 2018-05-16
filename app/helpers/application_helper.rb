@@ -64,6 +64,19 @@ module ApplicationHelper
     "active" if current_page? path
   end
 
+  def alerts
+    # sets variable to three diff types of alerts, so alert will not be equal to one of these if they return true
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Matthew Israelson Portfolio", sticky: false)
+  end
+
 end
 
 # nav_links = <<NAV
