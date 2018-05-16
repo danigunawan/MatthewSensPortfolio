@@ -26,15 +26,15 @@
 
   <div class="col-md-12">
     <h2>Technologies Used</h2>
-
     <div>
       <%= form.fields_for :technologies do |technology_form| %>
-        <div class="form-group">
-          <%= technology_form.label :name %>
-          <%= technology_form.text_field :name, autofocus: true, class: 'form-control' %>
-        </div>
+        <%= render 'technology_fields', f: technology_form %>
       <% end %>
     </div>
+  </div>
+
+  <div>
+    <%= link_to_add_association 'Add Technology', form, :technologies %>
   </div>
 
   <div class="actions">
