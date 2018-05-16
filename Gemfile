@@ -78,3 +78,5 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 gem 'cocoon'
 
 gem 'gritter'
+
+gem 'redis'

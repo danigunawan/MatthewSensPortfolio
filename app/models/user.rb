@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   validates_presence_of :name
 
+  has_many :comments, dependent: :destroy
+
 # below we use split.first and split.last so that if a user only enters a first
 # name the method still works. if we tried to use [0] and [1] we would get an error
   def first_name
