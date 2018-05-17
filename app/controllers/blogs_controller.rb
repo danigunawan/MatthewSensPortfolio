@@ -14,8 +14,12 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     # here we have access to @blog.title because of the set_blog action below that is called as a before_action
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
+
     @page_title = @blog.title
     @seo_keywords = @blog.title
+
   end
 
   # GET /blogs/new
