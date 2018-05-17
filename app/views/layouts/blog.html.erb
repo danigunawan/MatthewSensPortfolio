@@ -47,17 +47,18 @@
           <h3 class="pb-3 mb-4 font-italic border-bottom">
             From the Firehose
           </h3>
-          <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+          <%= link_to_if(logged_in?(:site_admin), 'Write a New Blog', new_blog_path, class: "btn btn-info") %>
           <%= yield %>
         </div>
 
-    <%= render 'shared/blog_sidebar' %>
+        <%= render 'shared/blog_sidebar' %>
 
-    <%= render 'shared/blog_footer' %>
 
       </div><!-- /.row -->
     </main><!-- /.container -->
 
+    <%= render 'shared/blog_footer' %>
+    
     <%= alerts %>
 
     <!-- This is for saying thanks for visiting from facebook etc -->
