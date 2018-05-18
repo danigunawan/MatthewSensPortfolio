@@ -47,7 +47,7 @@
           <h3 class="pb-3 mb-4 font-italic border-bottom">
             From the Firehose
           </h3>
-          <%= link_to_if(logged_in?(:site_admin), 'Write a New Blog', new_blog_path, class: "btn btn-info") %>
+          <%= link_to 'Write a New Blog', new_blog_path, class: "btn btn-info" if logged_in?(:site_admin) %>
           <%= yield %>
         </div>
 
@@ -58,7 +58,7 @@
     </main><!-- /.container -->
 
     <%= render 'shared/blog_footer' %>
-    
+
     <%= alerts %>
 
     <!-- This is for saying thanks for visiting from facebook etc -->

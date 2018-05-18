@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def login_helper style = ""
      if current_user.is_a?(GuestUser)
       (link_to "Register", new_user_registration_path, class: style) +
@@ -74,7 +75,7 @@ module ApplicationHelper
   end
 
   def alert_generator msg
-    js add_gritter(msg, title: "Matthew Israelson Portfolio", sticky: false)
+    js add_gritter(msg, title: "Matthew Israelson Portfolio", sticky: false, time: 2000)
   end
 
 end
