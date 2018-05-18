@@ -1,10 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_topbar_topics, except: [:update, :create, :destroy, :toggle_status]
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
-  # GET /blogs
-  # GET /blogs.json
   def index
     if logged_in?(:site_admin)
       @blogs = Blog.all.order(created_at: :desc).page(params[:page]).per(5)
@@ -27,7 +26,6 @@ class BlogsController < ApplicationController
     else
       redirect_to blogs_path, notice: "You are not allowed to see this, so sad"
     end
-
   end
 
   # GET /blogs/new
@@ -92,5 +90,9 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :body, :topic_id)
+    end
+
+    def set_topbar_topics
+      @topbar_topics = Topic.with_blogs
     end
 end

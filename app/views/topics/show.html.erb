@@ -1,0 +1,8 @@
+
+  <h1><%= @topic.title %></h1>
+
+  <%= paginate @blogs %>
+
+  <%= render @blogs %>
+
+  <%= paginate @blogs, theme: 'twitter-bootstrap-4', class: "blog-pagination" %>

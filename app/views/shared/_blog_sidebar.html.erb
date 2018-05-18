@@ -15,6 +15,16 @@
       <li><a href="#">December 2013</a></li>
     </ol>
   </div>
+  <div class="p-3">
+    <h4 class="font-italic">Topics</h4>
+    <ol class="list-unstyled mb-0">
+      <p>
+        <% @topbar_topics.each do |topic| %>
+          <%= link_to topic.title, topic_path(topic), class: "p-2 text-muted" %>
+        <% end %>
+      </p>
+    </ol>
+  </div>
 
   <div class="p-3">
     <h4 class="font-italic">Elsewhere</h4>
