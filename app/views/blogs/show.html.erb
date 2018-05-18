@@ -1,7 +1,10 @@
-<p>
+<h2>
   <strong>Title:</strong>
   <%= @blog.title %>
+</h2>
 
+<p>
+  <%= @blog.topic.title %>
 </p>
 
 <p>
@@ -9,7 +12,7 @@
   <%= @blog.body %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-success" if logged_in?(:site_admin) %>
+<%= link_to '✎ Edit Post', edit_blog_path(@blog), class: "btn btn-success" if logged_in?(:site_admin) %>
 
 <%= render 'comments/comment_form' %>
 
@@ -18,3 +21,5 @@
   <%= render @blog.comments %>
 </div>
 <!-- End of comments -->
+<br>
+<%= link_to '◀︎ Back', blogs_path, class: "btn btn-warning" %>
