@@ -9,7 +9,7 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @blog.body %>
+  <%= markdown @blog.body %>
 </p>
 
 <%= link_to '✎ Edit Post', edit_blog_path(@blog), class: "btn btn-success" if logged_in?(:site_admin) %>
@@ -22,4 +22,4 @@
 </div>
 <!-- End of comments -->
 <br>
-<%= link_to '◀︎ Back', blogs_path, class: "btn btn-warning" %>
+<%= link_to '◀︎ Blog Index', blogs_path, class: "btn btn-warning" %>

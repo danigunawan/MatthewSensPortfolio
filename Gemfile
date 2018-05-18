@@ -54,29 +54,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'friendly_id', '~> 5.1.0'
-
 gem 'devise'
-
 gem 'bootstrap', '~> 4.1.1'
-
 gem 'jquery-rails'
-
 gem 'sens_portfolio_view_tool', git: 'https://github.com/misraelson/sens_portfolio_view_tool'
-
 gem 'petergate', '~> 1.7'
-
 gem 'font-awesome-rails'
-
 gem 'kaminari', '~> 1.1.1'
-
 gem 'bootstrap4-kaminari-views'
-
 gem 'jquery-ui-rails', '~> 6.0.1'
-
 gem 'cocoon'
-
 gem 'gritter'
-
 gem 'redis'
+gem 'redcarpet'
+gem 'coderay'
