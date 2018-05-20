@@ -212,19 +212,16 @@ body {
 }
 
 // CUSTOM COLOR ON HOME.HTML.ERB ------>
-
-// Custom name highlight COLOR on homepage
+// Custom highlight NAME COLOR on homepage
 .highlight-name {
   background: -webkit-linear-gradient(#E31B6D, #6a3093);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .alpha { color: $indigo; }
-
 // Color end <------
 
-// Button gradient animation on home page ------>
+// VIEW MY WORK custom button gradient animation on home page ------>
 .gradient-button-container {
   display: flex;
   // justify-content: center;
@@ -234,7 +231,6 @@ body {
   width: 80vw;
   margin: 0 auto;
 }
-
 .hoverbutton {
   // font-family: 'Varela Round', sans-serif;
   // flex: 1 1 auto;
@@ -247,52 +243,80 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
- /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-  // box-shadow: 0 0 20px #eee;
   border-radius: 10px;
  }
-
  .hoverbutton:hover {
   background-position: right center; /* change the direction of the change here */
   box-shadow: 0.2vw 0.2vw 0 lightcoral;
 }
-
 .gradient-button {
   background-image: linear-gradient(to right, #E31B6D 0%, #a044ff 51%, #00dbde 100%);
 }
 // button end <---------
 
+// CUSTOM NAVBAR gradient color animation on hover ------------>
+.gradient-navbar {
+  display: inline-flex;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  // font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: rgba(223,190,106,0.7);
+  border-radius: 0;
+  padding: 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, #E31B6D, #a044ff, rgba(34,34,34,0), rgba(34,34,34,0));
+  // background: linear-gradient(270deg, #E31B6D 0%, #a044ff 51%, #00dbde 100%);
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  // margin: 0.625rem;
+  border: none;
+  border: 1px solid #00dbde;
+  border-radius: 5px;
+}
 
+.gradient-navbar:hover {
+  color: #fff;
+  border: 1px solid #a044ff;
+  color: $white;
+  background-position: 99% 50%;
+}
+// NAVBAR end <-----------------
 
-// .gradient-button {
-//   width: 20vw;
-//   height: 6vw;
-//   position: absolute;
-//   left: 50vw;
-//   top: 50vh;
-//   transform: translate(-50%,-80%);
-//   // font-family: 'Varela Round', sans-serif;
-//   font-size: 2vw;
-//   letter-spacing: 0.1em;
-//   color: #e8e8e8;
-//   border: none;
-//   border-radius: 10px;
-//   outline: none;
-//   background: linear-gradient(45deg,#d350db,teal,#d350db);
-//   background-size: 400% 400%;
-//   box-shadow: 1vw 1vw 0 lightcoral;
-//   cursor: pointer;
-//   transition: all 0.3s ease;
-//
-//   &:hover {
-//     animation: gradient 10s ease infinite;
-//     font-size: 2.05vw;
-//     box-shadow: 0.2vw 0.2vw 0 lightcoral;
-//   }
-// }
-//
-// @keyframes gradient {
-//   50% {
-//     background-position: 100% 0;
-//   }
-// }
+// CUSTOM HAMBURGER TOGGLER transition to X on click --------------->
+.navbar-toggler { cursor: pointer; padding: 10px 35px 16px 0px; }
+.navbar-toggler span, .navbar-toggler span:before, .navbar-toggler span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.navbar-toggler span:before {
+  top: -10px;
+}
+.navbar-toggler span:after {
+  bottom: -10px;
+}
+
+.navbar-toggler span, .navbar-toggler span:before, .navbar-toggler span:after {
+  transition: all 500ms ease-in-out;
+}
+.navbar-toggler.active span {
+  background-color: transparent;
+}
+.navbar-toggler.active span:before, .navbar-toggler.active span:after {
+  top: 0;
+}
+.navbar-toggler.active span:before {
+  transform: rotate(45deg);
+}
+.navbar-toggler.active span:after {
+  transform: rotate(-45deg);
+}
+// HAMBURGER TOGGLER end <-----------------

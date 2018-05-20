@@ -1,8 +1,6 @@
-
-  <h1><%= @topic.title %></h1>
-
+<div>
+  <h4 class="font-italic" style="display:inline;">Topic:</h4><h1 style="display:inline;"><%= @topic.title %></h1>
+</div>
   <%= paginate @blogs %>
-
   <%= render @blogs %>
-
   <%= paginate @blogs, theme: 'twitter-bootstrap-4', class: "blog-pagination" %>

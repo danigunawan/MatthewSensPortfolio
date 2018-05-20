@@ -3,39 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
+    
     <%= render 'shared/blog_nav' %>
 
     <!-- Start of blog header -->
     <div class="nav-scroller py-1 mb-2">
       <nav class="nav d-flex justify-content-between">
-        <!-- <a class="p-2 text-muted" href="#">Technology</a> -->
           <% @topbar_topics.each do |topic| %>
             <a><%= link_to topic.title, topic_path(topic), class: "p-2 text-muted" %></a>
           <% end %>
       </nav>
     </div>
     <!-- End -->
-
-    <!-- Jumbotron -->
+    <% unless !current_page?('/blogs') %>
+      <!-- Jumbotron -->
       <%= render 'shared/blog_jumbotron' %>
-    <!-- End of jumbotron -->
-
-    <!-- Start of two block features -->
-      <%= render 'shared/blog_block_features' %>
-    <!-- end of two block features -->
+      <!-- Start of two block features -->
+        <%= render 'shared/blog_block_features' %>
+    <% end %>
 
     <!-- Blog Posts Header -->
     <main role="main" class="container">
