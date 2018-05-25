@@ -1,6 +1,9 @@
+<hr>
+<button class="cool-hover-button">
+    <span>👇 Here's some info about me. Spoiler alert, I'm awesome 🤘</span>
+</button>
 <div class="container">
   <div id="about-me">
-    <h1>About</h1>
     <hr>
     <div class="row">
       <div class="col-md-6">
@@ -13,3 +16,14 @@
   </div>
 </div>
 <hr>
+
+<script>
+  document.querySelector('.cool-hover-button').onmousemove = function (e) {
+
+    var x = e.pageX - e.target.offsetLeft;
+    var y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty('--x', x + 'px');
+    e.target.style.setProperty('--y', y + 'px');
+  };
+</script>

@@ -1,4 +1,7 @@
-<h1>Tech Skills</h1>
+<hr>
+<button class="another-hover-button">
+    <span>👇 These are my skills. They're awesome too 🤘</span>
+</button>
 <hr>
 <div id="skills">
   <div class="skillbar clearfix " data-percent="85%">
@@ -30,14 +33,18 @@
   	<div class="skillbar-bar" style="background: linear-gradient(to right, #0abfbc, #00d8ff)"></div>
   	<div class="skill-bar-percent">60%</div>
   </div> <!-- End Skill Bar -->
-
-  <!-- <div class="skillbar clearfix " data-percent="100%">
-  	<div class="skillbar-title" style="background: #27ae60;"><span>SEO</span></div>
-  	<div class="skillbar-bar" style="background: #2ecc71;"></div>
-  	<div class="skill-bar-percent">100%</div>
-  </div> -->
 </div>
 
+<script>
+  document.querySelector('.another-hover-button').onmousemove = function (e) {
+
+    var x = e.pageX - e.target.offsetLeft;
+    var y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty('--x', x + 'px');
+    e.target.style.setProperty('--y', y + 'px');
+  };
+</script>
 
 <!-- script to animate skill bar when user scrolls down and section comes into view -->
 <script>
