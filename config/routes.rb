@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # get 'pages/home'
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  put 'sort', to: 'pages#sort'
 
   resources :blogs do
     member do

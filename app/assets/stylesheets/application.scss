@@ -1,6 +1,7 @@
 $enable-gradients: true;
 $enable-transitions: true;
 @import "bootstrap";
+@import "jquery-ui";
 @import "gritter";
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
@@ -224,7 +225,21 @@ body {
   background: -webkit-linear-gradient(#E31B6D, #6a3093);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+    // vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
+.highlight-name:hover,
+.highlight-name:focus,
+.highlight-name:active {
+    transform: scale(1.1);
+}
+
 .alpha { color: $indigo; }
 // Color end <------
 
@@ -336,9 +351,9 @@ body {
 	width:100%;
 	background:#eee;
 	height:35px;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
+	border-radius: 100px;
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
 	-webkit-transition:0.4s linear;
 	-moz-transition:0.4s linear;
 	-ms-transition:0.4s linear;
@@ -355,17 +370,17 @@ body {
 	position:absolute;
 	top:0;
 	left:0;
-width:110px;
+  width:110px;
 	font-weight:bold;
 	font-size:13px;
 	color:#ffffff;
 	background:#6adcfa;
-	-webkit-border-top-left-radius:3px;
-	-webkit-border-bottom-left-radius:4px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
+	-webkit-border-top-left-radius:100px;
+	-webkit-border-bottom-left-radius:100px;
+	-moz-border-radius-topleft:100px;
+	-moz-border-radius-bottomleft:100px;
+	border-top-left-radius:100px;
+	border-bottom-left-radius:100px;
 }
 
 .skillbar-title span {
@@ -374,21 +389,21 @@ width:110px;
 	padding:0 20px;
 	height:35px;
 	line-height:35px;
-	-webkit-border-top-left-radius:3px;
-	-webkit-border-bottom-left-radius:3px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
+	-webkit-border-top-left-radius:100px;
+	-webkit-border-bottom-left-radius:100px;
+	-moz-border-radius-topleft:100px;
+	-moz-border-radius-bottomleft:100px;
+	border-top-left-radius:100px;
+	border-bottom-left-radius:100px;
 }
 
 .skillbar-bar {
 	height:35px;
 	width:0px;
 	background:#6adcfa;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
+	border-radius: 100px;
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
 }
 
 .skill-bar-percent {
@@ -402,6 +417,7 @@ width:110px;
 	color:rgba(0, 0, 0, 0.4);
 }
 // SKILLBAR end <-----------------
+
 
 .cool-hover-button {
     position: relative;
