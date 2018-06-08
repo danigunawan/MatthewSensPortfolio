@@ -1,6 +1,6 @@
 <hr>
-<button class="another-hover-button">
-    <h3>👇 This is for fun 🤘</h3>
+<button class="third-hover-button">
+    <span>👇 This is for fun 🤘</span>
 </button>
 <hr>
 <div class="row sortable">
@@ -159,6 +159,16 @@
 </div>
 
 <%= javascript_include_tag "randomcolor" %>
+
+<script>
+  document.querySelector('.third-hover-button').onmousemove = function (e) {
+    var x = e.pageX - e.target.offsetLeft;
+    var y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty('--x', x + 'px');
+    e.target.style.setProperty('--y', y + 'px');
+  };
+</script>
 
 <!-- can get random color but how to assign to our element above? -->
 <script>
