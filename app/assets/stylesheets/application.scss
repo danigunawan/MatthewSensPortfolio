@@ -47,9 +47,14 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 50em;
 }
 
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 0;
+  align-items: center;
+}
 
 /*
  * Header
@@ -61,10 +66,11 @@ body {
 .masthead-brand {
   font: 40px "Monoton", sans-serif; font-weight: 400;
   padding: .25rem 0;
+  max-width: 50em;
 }
 
 .nav-masthead {
-  display: inline-flex;
+  flex-basis: auto;
 }
 
 .nav-masthead .nav-link {
@@ -264,7 +270,8 @@ body {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  width: 80vw;
+  // width: 80vw;
+  max-width: 50em;
   margin: 0 auto;
 }
 .hoverbutton {
@@ -292,7 +299,7 @@ body {
 
 // CUSTOM NAVBAR gradient color animation on hover ------------>
 .gradient-navbar {
-  display: inline-flex;
+  display: flex;
   background: transparent;
   text-transform: uppercase;
   font-weight: 500;
@@ -322,7 +329,7 @@ body {
 // NAVBAR end <-----------------
 
 // CUSTOM HAMBURGER TOGGLER transition to X on click --------------->
-.navbar-toggler { cursor: pointer; padding: 10px 35px 16px 0px; }
+.navbar-toggler { cursor: pointer; padding: 10px 55px 16px 0px; }
 .navbar-toggler span, .navbar-toggler span:before, .navbar-toggler span:after {
   cursor: pointer;
   border-radius: 1px;
@@ -330,7 +337,8 @@ body {
   width: 35px;
   background: white;
   position: absolute;
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
   content: '';
 }
 .navbar-toggler span:before {
