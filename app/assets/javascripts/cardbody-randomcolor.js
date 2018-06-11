@@ -5,5 +5,5 @@
   console.log(divCardBody);
 
     divCardBody.each(function(){
-      $(this).css("background-color", randomColor({hue: 'blue', luminosity: 'light'}));
+      $(this).css("background-color", randomColor({luminosity: 'light'}));
     });//end each
