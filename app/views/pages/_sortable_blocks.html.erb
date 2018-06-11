@@ -3,162 +3,21 @@
     <span>👇 This is for fun 🤘</span>
 </button>
 <hr>
+<!-- helper method found in pages_helper.rb -->
 <div class="row sortable">
   <% sortable_blocks_helper.each do |letter| %>
     <div class="col-xs-6 col-sm-2">
       <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-        <div class="card-body" style="">
-            <h3 class="card-title"><%= letter %></h3>
-        </div>
+          <div class="card-body">
+              <h3 class="card-title"><%= letter %></h3>
+          </div>
       </div>
     </div>
   <% end %>
-
-  <div class="col-xs-3 col-sm-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #E17F8E;">
-        <h3 class="card-title">O</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-3 col-sm-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #E94A7E;">
-        <h3 class="card-title">V</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-3 col-sm-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #8D78B9;">
-        <h3 class="card-title">E</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #AEB4A9;">
-        <h3 class="card-title">T</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #E0C1B3;">
-        <h3 class="card-title">H</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #D89A9E;">
-        <h3 class="card-title">E</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #C37D92;">
-        <h3 class="card-title">S</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #846267;">
-        <h3 class="card-title">E</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #82D4BB;">
-        <h3 class="card-title">B</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #82C09A;">
-        <h3 class="card-title">L</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #829298;">
-        <h3 class="card-title">O</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #ff9b9b;">
-        <h3 class="card-title">C</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #89A99A;">
-        <h3 class="card-title">K</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: #fd891a;">
-        <h3 class="card-title">S</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: blue;">
-        <h3 class="card-title">A</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: blue;">
-        <h3 class="card-title">R</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: blue;">
-        <h3 class="card-title">O</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: blue;">
-        <h3 class="card-title">U</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: blue;">
-        <h3 class="card-title">N</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="sortable-card mb-4 box-shadow" data-id="letter_block">
-      <div class="card-body" style="background-color: orange;">
-        <h3 class="card-title">D</h3>
-      </div>
-    </div>
-  </div>
-
-
 </div>
 
 <%= javascript_include_tag "randomcolor" %>
+<%= javascript_include_tag "cardbody-randomcolor" %>
 
 <script>
   document.querySelector('.third-hover-button').onmousemove = function (e) {
@@ -168,12 +27,4 @@
     e.target.style.setProperty('--x', x + 'px');
     e.target.style.setProperty('--y', y + 'px');
   };
-</script>
-
-<!-- can get random color but how to assign to our element above? -->
-<script>
-  var myColor = randomColor();
-  console.log(myColor);
-  $('.card-body').css("background-color", myColor);
-  // $(".card-body").attr("background-color", myColor);
 </script>

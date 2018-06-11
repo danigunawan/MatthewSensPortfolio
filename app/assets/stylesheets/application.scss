@@ -348,6 +348,11 @@ body {
   bottom: -10px;
 }
 
+.navbar-dark .navbar-toggler-icon {
+  border: none;
+  background-image: none;
+}
+
 .navbar-toggler span, .navbar-toggler span:before, .navbar-toggler span:after {
   transition: all 500ms ease-in-out;
 }
@@ -548,4 +553,9 @@ body {
     &:hover::before {
         --size: 400px;
     }
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 0.85rem;
 }
