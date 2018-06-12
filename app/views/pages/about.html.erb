@@ -1,12 +1,75 @@
-<h1>About Me</h1>
+<button class="first-hover-button">
+    <span>👇 Here's some info about me. Spoiler alert, I'm awesome 🤘</span>
+</button>
 
-<hr>
+<div id="about-me">
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/alexander_skarsgard.jpg", width: 200, alt: "profile image" %>
+    </div>
+    <div class="col-md-8">
+      <p class="lead">I'm a full-stack developer with a passion for building pixel-perfect responsive front-ends with robust RESTful Rails API backends. Oh, and I make killer scrambled eggs and shred on guitar 🎸</p>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "http://static.tvtropes.org/pmwiki/pub/images/alexander_skarsgard.jpg", width: 300, alt: "profile image" %>
-  </div>
-  <div class="col-md-8">
-    <p class="lead">Passion for making cool shit!</p>
+      <p>
+        <button
+          class="btn btn-info"
+          type="button"
+          data-toggle="collapse"
+          data-target="#jobHistory"
+          aria-expanded="false"
+          aria-controller="jobHistroy"
+        >
+        Web Design Projects
+        </button>
+
+        <button
+          class="btn btn-info"
+          type="button"
+          data-toggle="collapse"
+          data-target="#education"
+          aria-expanded="false"
+          aria-controller="education"
+        >
+        Education
+        </button>
+      </p>
+
+      <p>
+        <div class="app-card-container">
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              <a href="https://buymorebucha.com/">
+                Bucha Brew Kombucha: Custom Shopify Store & Branding
+              </a>
+            </div>
+            <div class="card card-block">
+              <a href="http://redlinemedialive.com/">
+                Red Line Media Inc: Complete Site Redesign and Rebrand
+              </a>
+            </div>
+          </div>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              CodeCore Developer Bootcamp (12-week Full-Stack Developer Certificate)
+            </div>
+            <div class="card card-block">
+              Udemy: Dissecting Ruby on Rails 5 (Certificate of Completion)
+            </div>
+          </div>
+        </div>
+      </p>
+    </div>
   </div>
 </div>
+
+<script>
+  document.querySelector('.first-hover-button').onmousemove = function (e) {
+
+    var x = e.pageX - e.target.offsetLeft;
+    var y = e.pageY - e.target.offsetTop;
+
+    e.target.style.setProperty('--x', x + 'px');
+    e.target.style.setProperty('--y', y + 'px');
+  };
+</script>
