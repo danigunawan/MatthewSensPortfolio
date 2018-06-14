@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -69,3 +71,6 @@ gem 'gritter'
 gem 'redis'
 gem 'redcarpet'
 gem 'coderay'
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem 'carrierwave-aws'
