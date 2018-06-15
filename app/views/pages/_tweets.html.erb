@@ -1,0 +1,13 @@
+<hr>
+<h1 class="cover-heading">Tech Tweets => Pulled from the Twitter API</h1>
+  <div class="row sortable">
+    <% @tweets.each do |tweet| %>
+      <div class="col-auto col-sm-6">
+        <div class="sortable-card mb-4 box-shadow">
+          <div class="card-body">
+            <h3 class="card-title"><%= twitter_parser tweet %></h3>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

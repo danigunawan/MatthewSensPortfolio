@@ -12,10 +12,6 @@ class PagesController < ApplicationController
     @phone_number = "7915643"
   end
 
-  def tech_news
-    @tweets = SocialTool.twitter_search
-  end
-
   def sort
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
