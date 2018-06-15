@@ -21,6 +21,7 @@ Bundler.require(*Rails.groups)
 module MatthewSensPortfolio
   class Application < Rails::Application
     config.eager_load_paths << "#{Rails.root}/lib"
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     config.generators do |g|
       g.orm :active_record
       g.template_engine :erb
