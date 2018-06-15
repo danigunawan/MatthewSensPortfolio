@@ -4,12 +4,15 @@
 
 ### Features
 
-- Real time chat engine for comments
+- Real-time chat engine comment updates via Action Cable
 - Blog
-- Portfolio
-- Drag and drop interface
+- Portfolio (sortable portfolio items that persist via AJAX)
+- Sortable.js 'drag and drop' interface for card blocks on main page
+- Typed.js implementation
+- Markup integration / implementation on blog posts
+- Custom javascript animations
 
-### Code Examples
+### Markup Code Example
 
 ```ruby
 def my_great_meth
