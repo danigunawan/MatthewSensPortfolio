@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
+
   def home
     @skills = Skill.all
+    @tweets = SocialTool.twitter_search
   end
 
   def about
@@ -8,6 +10,10 @@ class PagesController < ApplicationController
 
   def contact
     @phone_number = "7915643"
+  end
+
+  def tech_news
+    @tweets = SocialTool.twitter_search
   end
 
   def sort
